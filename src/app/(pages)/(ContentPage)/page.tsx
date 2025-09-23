@@ -25,14 +25,11 @@ export default function ContentPage() {
         <Header className="fixed top-4 left-3/5 -translate-x-1/2 w-[1200px] h-16 px-12 flex justify-center items-center m-0 z-50 bg-[rgba(22,22,22,0.91)] select-none rounded-2xl">
           <HeaderComponent active={active} setActive={setActive} />
         </Header>
-        <Layout className="h-[calc(100vh-64px)] flex flex-row pt-22">
-          <Sider
-            className="text-center text-white flex items-center justify-center"
-            width={300}
-          >
+        <Layout className="flex flex-row pt-22">
+          <Sider className="text-center text-white" width={350}>
             <SiderComponent />
           </Sider>
-          <Content className="break-words text-center text-white flex-1 flex items-center justify-center">
+          <Content className="text-center text-white flex-1">
             <ContentComponent active={active} />
           </Content>
         </Layout>
