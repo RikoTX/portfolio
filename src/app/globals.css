@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -13,5 +11,29 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #000000; 
+  background-color: #000000;
+}
+.ant-notification .my-notif {
+  background: rgba(0, 0, 0, 0.95) !important;
+  color: #fff !important;
+  border: 2px solid rgba(248, 248, 248, 0.06) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.ant-notification .my-notif .ant-notification-notice-message,
+.ant-notification .my-notif .ant-notification-notice-description {
+  color: #fff !important;
+}
+
+.ant-notification .my-notif .ant-notification-notice-icon,
+.ant-notification-notice-close,
+.ant-notification .my-notif .ant-notification-close-icon {
+  color: #fff !important;
+}
+
+::selection {
+  background: white;
+  color: black;
 }

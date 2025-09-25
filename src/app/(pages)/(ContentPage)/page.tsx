@@ -26,7 +26,7 @@ export default function ContentPage() {
           <HeaderComponent active={active} setActive={setActive} />
         </Header>
         <Layout className="flex flex-row pt-22">
-          <Sider className="text-center text-white" width={350}>
+          <Sider className="text-center text-white" width={345}>
             <SiderComponent />
           </Sider>
           <Content className="text-center text-white flex-1">
