@@ -29,7 +29,7 @@ export default function ContentPage() {
           <Sider className="text-center text-white" width={345}>
             <SiderComponent />
           </Sider>
-          <Content className="text-center text-white flex-1">
+          <Content>
             <ContentComponent active={active} />
           </Content>
         </Layout>
