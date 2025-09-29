@@ -3,6 +3,7 @@ import LogoW3 from "../LogoW3/page";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import { Button, notification, Space } from "antd";
+import { motion } from "framer-motion";
 
 export default function FollowMe() {
   const boxRef = useRef<HTMLDivElement | null>(null);
@@ -50,26 +51,32 @@ export default function FollowMe() {
         <button ref={textRef} className="truncate hover:underline">
           kokishamir01@gmail.com
         </button>
-        <button
-          className="text-gray-300 hover:text-accent transition p-2"
-          tabIndex={0}
-          onClick={handleCopy}
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 100, damping: 8 }}
         >
-          <svg
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <button
+            className="text-gray-300 hover:text-accent transition p-2"
+            tabIndex={0}
+            onClick={handleCopy}
           >
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-        </button>
+            <svg
+              stroke="currentColor"
+              fill="none"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </motion.div>
       </div>
 
       <div

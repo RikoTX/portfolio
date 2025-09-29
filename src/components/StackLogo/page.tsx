@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import React from "react";
 
 type Stack = {
@@ -7,7 +7,7 @@ type Stack = {
   logo: JSX.Element;
 };
 
-export default function StackLogo({ logo, nameStack,link }: Stack) {
+export default function StackLogo({ logo, nameStack }: Stack) {
   return (
     <motion.div
       whileHover={{ scale: 1.2 }}
@@ -28,9 +28,9 @@ export default function StackLogo({ logo, nameStack,link }: Stack) {
       >
         {logo}
       </svg>
-      <span className="text-base mt-2 font-light text-gray-300">
+      <p className="text-base mt-2 font-light text-gray-300 text-center">
         {nameStack}
-      </span>
+      </p>
     </motion.div>
   );
 }
