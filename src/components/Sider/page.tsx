@@ -3,7 +3,6 @@ import InformationCard from "@/components/InformationCard/page";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import FollowMe from "../FollowMe/page";
-
 export default function Sider() {
   const boxRef = useRef<HTMLDivElement | null>(null);
 
@@ -18,7 +17,10 @@ export default function Sider() {
   }, []);
 
   return (
-    <div ref={boxRef} className="break-all w-full h-full ml-6 flex flex-col gap-15">
+    <div
+      ref={boxRef}
+      className="break-all w-full h-full ml-6 flex flex-col gap-15"
+    >
       <InformationCard />
       <FollowMe />
     </div>

@@ -3,15 +3,17 @@ import { useRef, useEffect } from "react";
 import { Col, Row } from "antd";
 import ButtonInvisible from "@/components/ButtonInvisble/page";
 import { gsap } from "gsap";
+import { useTranslation } from "react-i18next";
+
 interface HeaderProps {
   active: string;
   setActive: (item: string) => void;
 }
 
 export default function Header({ active, setActive }: HeaderProps) {
-
+  const { t } = useTranslation();
   const boxRef = useRef<HTMLDivElement | null>(null);
-  const menuItems = ["About", "Experience", "Education", "Project"];
+  const menuItems = ["about", "growth", "education", "projects"];
 
   useEffect(() => {
     if (boxRef.current) {
@@ -31,8 +33,8 @@ export default function Header({ active, setActive }: HeaderProps) {
       {menuItems.map((item) => (
         <Col span={4} key={item}>
           <ButtonInvisible
-            text={item}
             isActive={active === item}
+            text={t(`header.${item}`)}
             onClick={() => setActive(item)}
           />
         </Col>

@@ -23,7 +23,7 @@ export default function ProjectCard({
       className="bg-surface border border-gray-700 rounded-2xl shadow-md overflow-hidden flex flex-col"
       style={{ opacity: 1, transform: "none" }}
     >
-      <div className="relative group">
+      <div className="relative group select-none">
         <img
           alt="project"
           className="w-full h-44 object-cover filter blur-[2px] brightness-75 transition duration-300 group-hover:blur-sm group-hover:brightness-100"

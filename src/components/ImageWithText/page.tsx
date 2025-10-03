@@ -14,7 +14,7 @@ export default function ImageWithText({
   textBottom,
 }: Props) {
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 select-none">
       {logo ? (
         <svg
           stroke="currentColor"

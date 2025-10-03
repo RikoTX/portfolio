@@ -1,7 +1,32 @@
 "use client";
 import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
 import ImageWithText from "../ImageWithText/page";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
+
 export default function Education() {
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      const split = new SplitText(textRef.current, {
+        type: "words",
+        aria: "hidden",
+      });
+
+      gsap.from(split.words, {
+        opacity: 0,
+        y: 20,
+        delay: 1.1,
+        duration: 1,
+        ease: "sine.out",
+        stagger: 0.1,
+      });
+    });
+  }, []);
+
   return (
     <div>
       <h1 className="text-center text-3xl md:text-4xl font-semibold text-accent mb-6">
@@ -81,10 +106,11 @@ export default function Education() {
             />
           </motion.div>
           <motion.div
+            ref={textRef}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="w-full max-w-3xl text-left text-md font-semibold mt-5"
+            className="w-full max-w-3xl text-left text-md font-semibold mt-5 leading-relaxed mx-auto animate-me"
           >
             <p>
               I began my front-end development journey as a self-taught

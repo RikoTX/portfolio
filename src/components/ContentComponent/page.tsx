@@ -2,23 +2,31 @@
 import { Kanit } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import About from "./About";
-import Experience from "./Experience";
+import Growth from "./Growth";
 import Education from "./Education";
 import Project from "./Project";
+import { useEffect } from "react";
 
 const kanit = Kanit({
   subsets: ["latin", "cyrillic"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
 });
 
 interface ContentProps {
   active: string;
+  setActive: (item: string) => void;
 }
 
-export default function ContentComponent({ active }: ContentProps) {
+export default function ContentComponent({ active, setActive }: ContentProps) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [active]);
+
   return (
-    <div className={`${kanit.className} max-w-full w-full text-white bg-red-700/10 p-4 break-words`}>
+    <div
+      className={`${kanit.className} max-w-full w-full text-white p-4 break-words`}
+    >
       <AnimatePresence mode="wait">
         {active === "About" && (
           <motion.div
@@ -32,15 +40,15 @@ export default function ContentComponent({ active }: ContentProps) {
           </motion.div>
         )}
 
-        {active === "Experience" && (
+        {active === "Growth" && (
           <motion.div
-            key="experience"
+            key="Growth"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            <Experience />
+            <Growth setActive={setActive} />
           </motion.div>
         )}
 
@@ -55,7 +63,7 @@ export default function ContentComponent({ active }: ContentProps) {
             <Education />
           </motion.div>
         )}
-        
+
         {active === "Project" && (
           <motion.div
             key="project"

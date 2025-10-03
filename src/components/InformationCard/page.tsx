@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 
-
 export default function informationCard() {
   return (
     <div className=" w-full h-110 rounded-2xl border border-gray-500/50  flex justify-center flex-col flex-wra p-7 items-center gap-10">
@@ -10,7 +9,7 @@ export default function informationCard() {
         alt="Logo"
         width={38}
         height={38}
-        className="w-38 h-38 rounded-[50%] border-2 border-white"
+        className="w-38 h-38 rounded-[50%] border-2 border-white select-none"
         priority
       />
       <div className="flex gap-3 flex-col">

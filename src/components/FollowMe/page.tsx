@@ -29,13 +29,13 @@ export default function FollowMe() {
         await navigator.clipboard.writeText(textRef.current.innerText);
 
         api.open({
-          message: "Скопировано!",
-          description: "Почта скопирована в буфер обмена.",
+          message: "Copied!",
+          description: "The mail has been copied to the clipboard.",
           className: "my-notif",
           pauseOnHover: false,
         });
       } catch (err) {
-        console.error("Ошибка копирования:", err);
+        console.error("Copy error:", err);
       }
     }
   };

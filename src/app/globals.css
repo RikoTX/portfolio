@@ -37,3 +37,35 @@ body {
   background: white;
   color: black;
 }
+
+.ant-select,
+.ant-select-selector {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #363636 !important;
+}
+
+.ant-select-selection-item {
+  color: #ffffff !important;
+}
+
+.ant-select-arrow {
+  color: #fff !important;
+}
+
+.ant-select-dropdown {
+  background-color: #000000 !important;
+  color: #fff !important;
+}
+
+.ant-select-item {
+  color: #fff !important;
+}
+
+.ant-select-item-option-active {
+  background-color: #111 !important;
+}
+.ant-select-item-option-selected {
+  background-color: #222 !important;
+  color: #fff !important;
+}
