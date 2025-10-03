@@ -4,5 +4,15 @@
         "growth": "Рост",
         "education": "Образование",
         "projects": "Проекты"
+    },
+    "informationCard": {
+        "name": "Кокиш Амир",
+        "role": "Фронтенд разработчик",
+        "location": "Астана, Казахстан"
+    },
+    "followMe": {
+        "title": "Follow me",
+        "copied": "Copied!",
+        "copyDescription": "The mail has been copied to the clipboard."
     }
 }
