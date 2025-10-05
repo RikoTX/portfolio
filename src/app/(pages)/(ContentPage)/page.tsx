@@ -11,7 +11,7 @@ import { I18nextProvider } from "react-i18next";
 const { Header, Sider, Content } = Layout;
 
 export default function ContentPage() {
-  const [active, setActive] = useState("About");
+  const [active, setActive] = useState("about");
   return (
     <I18nextProvider i18n={i18n}>
       <ConfigProvider

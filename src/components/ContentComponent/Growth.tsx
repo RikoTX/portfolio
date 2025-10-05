@@ -8,7 +8,7 @@ import {
   ArrowRightOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
-import { texts } from "@/constants/growthText";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 interface GrowthProps {
@@ -17,6 +17,8 @@ interface GrowthProps {
 export default function Growth({ setActive }: GrowthProps) {
   const containerRef = useRef(null);
   const textBlocksRef = useRef([]);
+  const { t } = useTranslation();
+  const texts = t("contentPageGrowth.texts", { returnObjects: true });
 
   const addToRefs = (el: HTMLDivElement | null) => {
     if (el && !textBlocksRef.current.includes(el)) {
@@ -30,7 +32,7 @@ export default function Growth({ setActive }: GrowthProps) {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: `+=${texts.length * 1000}`, // длина скролла
+          end: `+=${texts.length * 1000}`,
           scrub: true,
           pin: true,
         },
@@ -68,16 +70,12 @@ export default function Growth({ setActive }: GrowthProps) {
   return (
     <div>
       <h1 className="text-center text-3xl md:text-4xl font-semibold text-accent mb-6">
-        Growth
+        {t("contentPageGrowth.title")}
       </h1>
 
       <div className="max-w-2xl mx-auto text-center px-4">
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-12">
-          This is the story of how, step by step, I built a career in IT from an
-          ordinary student. Here I share my journey: from my first understanding
-          of the internet to my official employment as a front-end developer.
-          This story explores my experience, discipline, and ongoing
-          development, which continues to this day.
+          {t("contentPageGrowth.text1")}
         </p>
       </div>
 
@@ -86,7 +84,7 @@ export default function Growth({ setActive }: GrowthProps) {
           animate={{ y: [0, -7, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <h1>Scroll down</h1>
+          <h1> {t("contentPageGrowth.scrollDown")}</h1>
           <ArrowDownOutlined />
         </motion.div>
       </div>
@@ -112,16 +110,16 @@ export default function Growth({ setActive }: GrowthProps) {
                     className="mt-6 flex items-center gap-2 bg-accent px-6 py-3 rounded-xl text-white shadow-lg"
                   >
                     <ArrowUpOutlined />
-                    Return to top
+                    {t("contentPageGrowth.returnToTop")}
                   </motion.button>
                   <motion.button
-                    onClick={() => setActive("Education")}
+                    onClick={() => setActive("education")}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className="mt-6 flex items-center gap-2 bg-accent px-6 py-3 rounded-xl text-white shadow-lg"
                   >
                     <ArrowRightOutlined />
-                    Education
+                    {t("contentPageGrowth.education")}
                   </motion.button>
                 </div>
               )}

@@ -1,5 +1,6 @@
 "use client";
 import { ExportOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 type typeCard = {
   name: string;
@@ -18,6 +19,7 @@ export default function ProjectCard({
   process,
   stack,
 }: typeCard) {
+  const { t } = useTranslation();
   return (
     <div
       className="bg-surface border border-gray-700 rounded-2xl shadow-md overflow-hidden flex flex-col"
@@ -36,7 +38,7 @@ export default function ProjectCard({
           className="absolute inset-0 flex items-center justify-center"
         >
           <span className="bg-black/60 px-4 py-2 rounded-full text-sm font-semibold text-blue-400 backdrop-blur-md">
-            <ExportOutlined /> Visit
+            <ExportOutlined /> {t("contentPageProject.visit")}
           </span>
         </a>
       </div>
@@ -55,9 +57,9 @@ export default function ProjectCard({
     }`}
           >
             {process === true
-              ? "Completed"
+              ? t("contentPageProject.processCompleted")
               : process === false
-              ? "Not completed"
+              ? t("contentPageProject.processNotCompleted")
               : process}
           </span>
         </div>

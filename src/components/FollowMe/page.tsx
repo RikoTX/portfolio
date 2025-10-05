@@ -4,11 +4,13 @@ import gsap from "gsap";
 import { useRef, useEffect } from "react";
 import { Button, notification, Space } from "antd";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function FollowMe() {
   const boxRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLButtonElement | null>(null);
   const [api, contextHolder] = notification.useNotification();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (boxRef.current) {
@@ -29,8 +31,8 @@ export default function FollowMe() {
         await navigator.clipboard.writeText(textRef.current.innerText);
 
         api.open({
-          message: "Copied!",
-          description: "The mail has been copied to the clipboard.",
+          message: t("followMe.copied"),
+          description: t("followMe.copyDescription"),
           className: "my-notif",
           pauseOnHover: false,
         });
@@ -44,7 +46,7 @@ export default function FollowMe() {
     <div className="flex flex-col gap-3">
       {contextHolder}
       <p className="text-3xl md:text-[33px] font-bold font-mono text-accent break-words">
-        Follow me
+         {t("followMe.title")}
       </p>
 
       <div className="bg-surface border border-gray-600 rounded-lg flex items-center justify-center px-4 gap-5 mx-8">

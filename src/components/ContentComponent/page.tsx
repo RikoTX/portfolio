@@ -28,7 +28,7 @@ export default function ContentComponent({ active, setActive }: ContentProps) {
       className={`${kanit.className} max-w-full w-full text-white p-4 break-words`}
     >
       <AnimatePresence mode="wait">
-        {active === "About" && (
+        {active === "about" && (
           <motion.div
             key="about"
             initial={{ opacity: 0, y: 20 }}
@@ -40,9 +40,9 @@ export default function ContentComponent({ active, setActive }: ContentProps) {
           </motion.div>
         )}
 
-        {active === "Growth" && (
+        {active === "growth" && (
           <motion.div
-            key="Growth"
+            key="growth"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -52,7 +52,7 @@ export default function ContentComponent({ active, setActive }: ContentProps) {
           </motion.div>
         )}
 
-        {active === "Education" && (
+        {active === "education" && (
           <motion.div
             key="education"
             initial={{ opacity: 0, y: 20 }}
@@ -64,9 +64,9 @@ export default function ContentComponent({ active, setActive }: ContentProps) {
           </motion.div>
         )}
 
-        {active === "Project" && (
+        {active === "projects" && (
           <motion.div
-            key="project"
+            key="projects"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

@@ -1,9 +1,9 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import en from "../public/en/translation.json";
-import ru from "../public/ru/translation.json";
-import kz from "../public/kz/translation.json";
+import en from "../public/config/en/translation.json";
+import ru from "../public/config/ru/translation.json";
+import kz from "../public/config/kz/translation.json";
 
 i18n
   .use(initReactI18next)
