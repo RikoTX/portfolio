@@ -10,8 +10,8 @@ interface WindowSize {
 
 export default function GridBackground() {
   const [windowSize, setWindowSize] = useState<WindowSize>({
-    width: 1920,
-    height: 1080,
+    width: 2560,
+    height: 1600,
   });
 
   useEffect(() => {

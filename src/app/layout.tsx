@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kokish Amir - Frontend Developer",
   description: "Portfolio of Kokish Amir, a passionate frontend developer specializing in React and modern web technologies.",
+  icons: {
+    icon: "/logo.png", 
+  },
 };
 
 export default function RootLayout({
