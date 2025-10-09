@@ -14,7 +14,7 @@ export default function ImageWithText({
   textBottom,
 }: Props) {
   return (
-    <div className="flex gap-3 select-none">
+    <div className="flex gap-3">
       {logo ? (
         <svg
           stroke="currentColor"
@@ -32,7 +32,7 @@ export default function ImageWithText({
         <img
           src={url}
           alt={typeof textTop === "string" ? textTop : "logo"}
-          className="h-[50px] w-[50px] shrink-0 object-contain"
+          className="h-[50px] w-[50px] shrink-0 object-contain select-none"
         />
       ) : null}
 

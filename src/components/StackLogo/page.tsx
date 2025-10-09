@@ -28,7 +28,7 @@ export default function StackLogo({ logo, nameStack }: Stack) {
       >
         {logo}
       </svg>
-      <p className="text-base mt-2 font-light text-gray-300 text-center">
+      <p className="text-base mt-2 font-light text-gray-300 text-center select-none">
         {nameStack}
       </p>
     </motion.div>

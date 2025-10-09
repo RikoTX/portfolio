@@ -27,7 +27,7 @@ export default function Header({ active, setActive }: HeaderProps) {
   return (
     <Row
       ref={boxRef}
-      className="w-full h-14 text-white bg-white/10 rounded-2xl border border-gray-300/40 backdrop-blur-md shadow-xl max-w-[calc(50%-8px)] text-center"
+      className="w-full h-14 text-white bg-white/10 rounded-2xl border border-gray-300/40 select-none backdrop-blur-md shadow-xl max-w-[calc(50%-8px)] text-center"
       justify="space-around"
     >
       {menuItems.map((item) => (
