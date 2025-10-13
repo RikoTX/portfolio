@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { JSX } from "react";
 import { motion } from "framer-motion";
+
 type LogoW3Props = {
   link: string;
   logo: JSX.Element;

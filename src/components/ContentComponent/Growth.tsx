@@ -16,9 +16,11 @@ interface GrowthProps {
 }
 export default function Growth({ setActive }: GrowthProps) {
   const containerRef = useRef(null);
-  const textBlocksRef = useRef([]);
+  const textBlocksRef = useRef<HTMLDivElement[]>([]);
   const { t } = useTranslation();
-  const texts = t("contentPageGrowth.texts", { returnObjects: true });
+  const texts: string[] = t("contentPageGrowth.texts", {
+    returnObjects: true,
+  }) as string[];
 
   const addToRefs = (el: HTMLDivElement | null) => {
     if (el && !textBlocksRef.current.includes(el)) {

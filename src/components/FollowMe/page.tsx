@@ -46,7 +46,7 @@ export default function FollowMe() {
     <div className="flex flex-col gap-3">
       {contextHolder}
       <p className="text-3xl md:text-[33px] font-bold font-mono text-accent break-words">
-         {t("followMe.title")}
+        {t("followMe.title")}
       </p>
 
       <div className="bg-surface border border-gray-600 rounded-lg flex items-center justify-center px-4 gap-5 mx-8">

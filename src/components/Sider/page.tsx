@@ -25,7 +25,7 @@ export default function Sider() {
       className="break-all w-full h-full ml-6 flex flex-col gap-15"
     >
       <InformationCard t={t}/>
-      <FollowMe t={t}/>
+      <FollowMe/>
     </div>
   );
 }

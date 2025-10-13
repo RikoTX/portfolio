@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { TFunction } from "i18next"; 
 interface InformationCardProps {
   t: TFunction;
 }
