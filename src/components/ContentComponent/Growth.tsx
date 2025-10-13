@@ -16,7 +16,7 @@ interface GrowthProps {
 }
 export default function Growth({ setActive }: GrowthProps) {
   const containerRef = useRef(null);
-  const textBlocksRef = useRef<HTMLDivElement[]>([]);
+  const textBlocksRef = useRef<Array<HTMLDivElement | null>>([]);
   const { t } = useTranslation();
   const texts: string[] = t("contentPageGrowth.texts", {
     returnObjects: true,
