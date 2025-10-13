@@ -9,7 +9,9 @@ import { useTranslation } from "react-i18next";
 export default function About() {
   const boxRef = useRef<HTMLDivElement | null>(null);
   const { t } = useTranslation();
-  const skills = t("contentPageAbout.skills", { returnObjects: true });
+  const skills = t("contentPageAbout.skills", {
+    returnObjects: true,
+  }) as string[];
 
   useEffect(() => {
     if (!boxRef.current) return;
