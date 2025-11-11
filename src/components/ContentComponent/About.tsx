@@ -74,7 +74,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <h1 className="mb-4 text-left">{t("contentPageAbout.Stack")}</h1>
+          <h1 className="mb-4 text-left">{t("contentPageAbout.Toolset")}</h1>
 
           <div ref={boxRef} className="flex flex-wrap gap-8">
             {LogoStack.map((stack, index) => (

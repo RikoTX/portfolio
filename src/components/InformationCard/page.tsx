@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { TFunction } from "i18next"; 
+import { TFunction } from "i18next";
 interface InformationCardProps {
   t: TFunction;
 }
@@ -8,11 +8,12 @@ export default function informationCard({ t }: InformationCardProps) {
   return (
     <div className=" w-full h-110 rounded-2xl border border-gray-500/50  flex justify-center flex-col flex-wra p-7 items-center gap-10">
       <Image
-        src="/me.jpg"
+        src="/me.png"
         alt="Logo"
-        width={38}
-        height={38}
-        className="w-38 h-38 rounded-[50%] border-2 border-white select-none"
+        width={1000}
+        height={1000}
+        unoptimized
+        className="w-40 h-40 rounded-full border-2 border-white object-cover"
         priority
       />
       <div className="flex gap-3 flex-col">

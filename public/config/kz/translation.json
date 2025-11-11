@@ -20,7 +20,7 @@
     "textAbout": "",
     "ProfessionalSkills": "",
     "ProfessionalSkillsText": "",
-    "Stack": ""
+    "Toolset": ""
   },
   "contentPageAbout": {
     "title": "Мен туралы",
@@ -39,7 +39,7 @@
       "Аутентификация және авторизация (кіру, сессиялар)",
       "Анимациялар және интерактивтілік: Framer Motion, GSAP, CSS-өту эффектілері"
     ],
-    "Stack": "Технологиялық стек"
+    "Toolset": "Құралдар жинағы"
   },
   "contentPageGrowth": {
     "title": "Өсу жолы",

@@ -52,7 +52,7 @@ export default function Project() {
                 link="https://rikotx.github.io/kinotower/"
                 img="/cardProject/Kinotower.png"
                 description={t("contentPageProject.textKinotower")}
-                process={true}
+                process={false}
                 stack={["React", "TypeScript", "Tailwind", "Ant-Designer"]}
               />
             </motion.div>
