@@ -77,5 +77,6 @@
     "processCompleted": "Completed",
     "processNotCompleted": "Not completed",
     "visit": "Visit"
-  }
+  },
+  "mobile_warning": "This site is currently under development for mobile devices. Please use a desktop."
 }
