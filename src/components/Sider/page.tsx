@@ -22,7 +22,7 @@ export default function Sider() {
   return (
     <div
       ref={boxRef}
-      className="break-all w-full h-full ml-6 flex flex-col gap-15"
+      className="ml-0 flex h-auto w-full min-w-0 flex-col gap-8 break-words px-4 pb-8 min-[1240px]:ml-6 min-[1240px]:h-full min-[1240px]:gap-15 min-[1240px]:px-0 min-[1240px]:pb-0"
     >
       <InformationCard t={t}/>
       <FollowMe/>

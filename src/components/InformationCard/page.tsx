@@ -13,7 +13,7 @@ export default function InformationCard({ t }: InformationCardProps) {
   const [avatarSrc, setAvatarSrc] = useState(GITHUB_AVATAR);
 
   return (
-    <div className=" w-full h-110 rounded-2xl border border-gray-500/50  flex justify-center flex-col flex-wra p-7 items-center gap-10">
+    <div className="flex h-auto w-full min-w-0 flex-col flex-wrap items-center justify-center gap-6 rounded-2xl border border-gray-500/50 p-7 min-[1240px]:h-110 min-[1240px]:gap-10">
       <Image
         src={avatarSrc}
         alt="Logo"
@@ -28,7 +28,7 @@ export default function InformationCard({ t }: InformationCardProps) {
       />
       <div className="flex gap-3 flex-col">
         <div>
-          <p className="text-3xl md:text-[43px] font-bold font-mono text-accent break-words ">
+          <p className="break-words text-center text-3xl font-bold font-mono text-accent min-[1240px]:text-[43px] ">
             {t("informationCard.name", { defaultValue: "Kokish Amir" })}
           </p>
         </div>

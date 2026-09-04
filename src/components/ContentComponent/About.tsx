@@ -30,8 +30,8 @@ export default function About() {
   }, []);
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
-      <h1 className="text-center text-3xl md:text-4xl font-semibold text-accent mb-6">
+    <div className="w-full min-w-0 px-2 sm:px-6 lg:px-8">
+      <h1 className="mb-6 break-words text-center text-3xl font-semibold text-accent md:text-4xl">
         {t("contentPageAbout.title")}
       </h1>
       <div className="flex flex-col items-center">
@@ -76,7 +76,7 @@ export default function About() {
         >
           <h1 className="mb-4 text-left">{t("contentPageAbout.Toolset")}</h1>
 
-          <div ref={boxRef} className="flex flex-wrap gap-8">
+          <div ref={boxRef} className="flex flex-wrap gap-4 xl:gap-8">
             {LogoStack.map((stack, index) => (
               <StackLogo
                 key={index}

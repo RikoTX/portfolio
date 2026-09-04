@@ -44,12 +44,12 @@ export default function FollowMe() {
   return (
     <div className="flex flex-col gap-3">
       {contextHolder}
-      <p className="text-3xl md:text-[33px] font-bold font-mono text-accent break-words">
+      <p className="break-words text-2xl font-bold font-mono text-accent min-[1240px]:text-[33px] md:text-[33px]">
         {t("followMe.title")}
       </p>
 
-      <div className="bg-surface border border-gray-600 rounded-lg flex items-center justify-center px-4 gap-5 mx-8">
-        <button ref={textRef} className="truncate hover:underline">
+      <div className="mx-2 flex min-w-0 items-center justify-center gap-3 rounded-lg border border-gray-600 bg-surface px-3 min-[1240px]:mx-8 min-[1240px]:gap-5 min-[1240px]:px-4">
+        <button ref={textRef} className="min-w-0 truncate hover:underline">
           kokishamir01@gmail.com
         </button>
         <motion.div
@@ -82,7 +82,7 @@ export default function FollowMe() {
 
       <div
         ref={boxRef}
-        className="flex gap-13 mt-2 justify-center items-center"
+        className="mt-2 flex items-center justify-center gap-8 min-[1240px]:gap-13"
       >
         {/* github */}
         <LogoW3

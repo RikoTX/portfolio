@@ -7,11 +7,49 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000000;
+}
+
+.ant-layout {
+  min-height: 0 !important;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 1239px) {
+  .ant-layout {
+    flex-direction: column !important;
+  }
+
+  .ant-layout-sider {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+    height: auto !important;
+  }
+
+  .ant-layout-sider-children {
+    height: auto !important;
+  }
+
+  .ant-layout-header {
+    line-height: normal !important;
+  }
 }
 .ant-notification .my-notif {
   background: rgba(0, 0, 0, 0.95) !important;

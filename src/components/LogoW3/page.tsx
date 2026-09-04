@@ -13,7 +13,7 @@ export default function LogoW3({ link, logo }: LogoW3Props) {
     whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 300, damping: 15 }}>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <svg
           stroke="currentColor"
           fill="currentColor"

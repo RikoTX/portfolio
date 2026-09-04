@@ -31,8 +31,8 @@ export default function Education() {
   }, []);
 
   return (
-    <div>
-      <h1 className="text-center text-3xl md:text-4xl font-semibold text-accent mb-6">
+    <div className="w-full min-w-0 px-2">
+      <h1 className="mb-6 break-words px-2 text-center text-3xl font-semibold text-accent md:text-4xl">
         {t("contentPageEducation.title")}
       </h1>
       <div className="flex flex-col items-center">
@@ -40,7 +40,7 @@ export default function Education() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full max-w-3xl text-left text-2xl font-semibold mb-14 "
+          className="mb-14 w-full min-w-0 max-w-3xl text-left text-2xl font-semibold "
         >
           <h1 className="mb-4 text-left text-3xl mb-8">
             {t("contentPageEducation.iStudyAt")}

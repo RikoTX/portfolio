@@ -23,7 +23,7 @@ export default function ContentComponent({ active }: ContentProps) {
 
   return (
     <div
-      className={`${kanit.className} max-w-full w-full text-white p-4 break-words`}
+      className={`${kanit.className} w-full min-w-0 max-w-full break-words p-4 pb-16 text-white min-[1240px]:pb-4`}
     >
       <AnimatePresence mode="wait">
         {active === "about" && (

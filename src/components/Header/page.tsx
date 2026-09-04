@@ -27,11 +27,11 @@ export default function Header({ active, setActive }: HeaderProps) {
   return (
     <Row
       ref={boxRef}
-      className="w-full h-14 text-white bg-white/10 rounded-2xl border border-gray-300/40 select-none backdrop-blur-md shadow-xl max-w-[calc(50%-8px)] text-center"
+      className="pointer-events-auto h-14 w-full max-w-[calc(50%-8px)] select-none rounded-2xl border border-gray-300/40 bg-white/10 text-center text-white shadow-xl backdrop-blur-md max-[1239px]:h-12 max-[1239px]:max-w-full"
       justify="space-around"
     >
       {menuItems.map((item) => (
-        <Col span={4} key={item}>
+        <Col span={4} xs={8} xl={4} key={item}>
           <ButtonInvisible
             isActive={active === item}
             text={t(`header.${item}`)}

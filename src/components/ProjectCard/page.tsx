@@ -1,6 +1,7 @@
 "use client";
 import { ExportOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 type typeCard = {
   name: string;
@@ -22,14 +23,16 @@ export default function ProjectCard({
   const { t } = useTranslation();
   return (
     <div
-      className="bg-surface border border-gray-700 rounded-2xl shadow-md overflow-hidden flex flex-col"
+      className="flex w-full min-w-0 flex-col overflow-hidden rounded-2xl border border-gray-700 bg-surface shadow-md"
       style={{ opacity: 1, transform: "none" }}
     >
-      <div className="relative group select-none">
-        <img
-          alt="project"
-          className="w-full h-44 object-cover filter blur-[2px] brightness-75 transition duration-300 group-hover:blur-sm group-hover:brightness-100"
+      <div className="relative group select-none h-44">
+        <Image
+          alt={name}
           src={img}
+          fill
+          sizes="(max-width: 1239px) 100vw, 50vw"
+          className="object-cover filter blur-[2px] brightness-75 transition duration-300 group-hover:blur-sm group-hover:brightness-100"
         />
         <a
           href={link}
@@ -44,7 +47,7 @@ export default function ProjectCard({
       </div>
 
       <div className="p-6 flex-1 flex flex-col gap-4 font-mono">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between max-[1239px]:flex-wrap max-[1239px]:gap-2">
           <h3 className="text-lg font-semibold text-accent">{name}</h3>
           <span
             className={`text-xs px-3 py-0.5 rounded-full 

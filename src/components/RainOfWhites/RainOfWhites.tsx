@@ -9,8 +9,8 @@ export default function StarRain() {
     container.style.position = "fixed";
     container.style.top = "0";
     container.style.left = "0";
-    container.style.width = "100vw";
-    container.style.height = "100vh";
+    container.style.width = "100%";
+    container.style.height = "100%";
     container.style.overflow = "hidden";
     container.style.pointerEvents = "none";
     container.style.zIndex = "-1";
