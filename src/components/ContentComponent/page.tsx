@@ -2,7 +2,6 @@
 import { Kanit } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import About from "./About";
-import Growth from "./Growth";
 import Education from "./Education";
 import Project from "./Project";
 import { useEffect } from "react";
@@ -15,10 +14,9 @@ const kanit = Kanit({
 
 interface ContentProps {
   active: string;
-  setActive: (item: string) => void;
 }
 
-export default function ContentComponent({ active, setActive }: ContentProps) {
+export default function ContentComponent({ active }: ContentProps) {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [active]);
@@ -37,18 +35,6 @@ export default function ContentComponent({ active, setActive }: ContentProps) {
             transition={{ duration: 0.5 }}
           >
             <About />
-          </motion.div>
-        )}
-
-        {active === "growth" && (
-          <motion.div
-            key="growth"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Growth setActive={setActive} />
           </motion.div>
         )}
 

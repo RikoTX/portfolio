@@ -28,7 +28,7 @@ export default function Project() {
                 link="https://rikotx.github.io/SoundBloom/Home"
                 img="/cardProject/SoundBloom.png"
                 description={t("contentPageProject.textSoundbloom")}
-                process={t("contentPageProject.processRevision")}
+                process={false}
                 stack={[
                   "React",
                   "React-Router",
@@ -52,7 +52,7 @@ export default function Project() {
                 link="https://rikotx.github.io/kinotower/"
                 img="/cardProject/Kinotower.png"
                 description={t("contentPageProject.textKinotower")}
-                process={false}
+                process={t("contentPageProject.processRevision")}
                 stack={["React", "TypeScript", "Tailwind", "Ant-Designer"]}
               />
             </motion.div>

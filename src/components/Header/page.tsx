@@ -13,7 +13,7 @@ interface HeaderProps {
 export default function Header({ active, setActive }: HeaderProps) {
   const { t } = useTranslation();
   const boxRef = useRef<HTMLDivElement | null>(null);
-  const menuItems = ["about", "growth", "education", "projects"];
+  const menuItems = ["about", "education", "projects"];
 
   useEffect(() => {
     if (boxRef.current) {

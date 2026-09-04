@@ -1,20 +1,30 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import { TFunction } from "i18next";
+
+const GITHUB_AVATAR = "https://github.com/RikoTX.png?size=400";
+const FALLBACK_AVATAR = "/avatar.jpg";
+
 interface InformationCardProps {
   t: TFunction;
 }
 export default function informationCard({ t }: InformationCardProps) {
+  const [avatarSrc, setAvatarSrc] = useState(GITHUB_AVATAR);
+
   return (
     <div className=" w-full h-110 rounded-2xl border border-gray-500/50  flex justify-center flex-col flex-wra p-7 items-center gap-10">
       <Image
-        src="/me.png"
+        src={avatarSrc}
         alt="Logo"
         width={1000}
         height={1000}
         unoptimized
         className="w-40 h-40 rounded-full border-2 border-white object-cover"
         priority
+        onError={() => {
+          if (avatarSrc !== FALLBACK_AVATAR) setAvatarSrc(FALLBACK_AVATAR);
+        }}
       />
       <div className="flex gap-3 flex-col">
         <div>

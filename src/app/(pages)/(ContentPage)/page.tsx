@@ -46,7 +46,7 @@ export default function ContentPage() {
               <SiderComponent />
             </Sider>
             <Content>
-              <ContentComponent setActive={setActive} active={active} />
+              <ContentComponent active={active} />
             </Content>
           </Layout>
         </Flex>
