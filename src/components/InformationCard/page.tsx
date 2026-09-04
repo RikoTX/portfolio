@@ -9,7 +9,7 @@ const FALLBACK_AVATAR = "/avatar.jpg";
 interface InformationCardProps {
   t: TFunction;
 }
-export default function informationCard({ t }: InformationCardProps) {
+export default function InformationCard({ t }: InformationCardProps) {
   const [avatarSrc, setAvatarSrc] = useState(GITHUB_AVATAR);
 
   return (

@@ -2,7 +2,7 @@
 import LogoW3 from "../LogoW3/page";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
-import { Button, notification, Space } from "antd";
+import { notification } from "antd";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -22,7 +22,6 @@ export default function FollowMe() {
         delay: 1.3,
         ease: "power3.out",
       });
-      2;
     }
   }, []);
   const handleCopy = async () => {
